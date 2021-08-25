@@ -9,9 +9,10 @@ const app = express();
 const expressLayouts = require("express-ejs-layouts");
 
 const indexRouter = require("./routes/index");
+const productRouter = require("./routes/products");
 
 app.set("view engine", "ejs");
-app.set("view", __dirname + "/views");
+app.set("views", __dirname + "/views");
 app.set("layout", "layouts/layout");
 app.use(expressLayouts);
 app.use(express.static("public"));
@@ -20,6 +21,7 @@ app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 app.use(cors());
 
 app.use("/", indexRouter);
+app.use("/products", productRouter);
 
 const PORT = process.env.PORT || 9000;
 
