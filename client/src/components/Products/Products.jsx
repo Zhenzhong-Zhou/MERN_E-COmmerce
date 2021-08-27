@@ -4,9 +4,9 @@ import Product from "./Product/Product";
 import useStyles from "./styles";
 
 const Products = () => {
-	const products = useSelector((state => state.products));
+	const products = useSelector((state) => state.products);
 	const classes = useStyles();
-	console.log(products)
+	console.log("products: ", products);
 	return (
 		<>
 			<div>Products</div>

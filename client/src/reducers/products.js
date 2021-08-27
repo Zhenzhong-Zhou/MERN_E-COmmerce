@@ -9,6 +9,6 @@ const reducer = (products = [], action) => {
 		default:
 			return products;
 	}
-}
+};
 
 export default reducer;
