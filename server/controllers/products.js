@@ -15,14 +15,6 @@ getProducts = async (req, res) => {
 	} catch (error) {
 		res.redirect("/");
 	}
-	// try {
-	// 	const products = await Product.find();
-	// 	console.log(products);
-	// 	res.render("products/index", {product: new Product()});
-	// 	// res.status(200).json(products);
-	// } catch (error) {
-	// 	res.status(404).json({message: error.message});
-	// }
 };
 
 // newProduct Controller
@@ -51,15 +43,6 @@ createProduct = async (req, res) => {
 			errorMessage: "Error creating Product"
 		});
 	}
-
-	// const product = req.body;
-	// const createProduct = new Product(product);
-	// try {
-	// 	await createProduct.save();
-	// 	res.status(201).json(createProduct);
-	// } catch (error) {
-	// 	res.status(409).json({message: error.message});
-	// }
 };
 
 exports.getProducts = getProducts;
