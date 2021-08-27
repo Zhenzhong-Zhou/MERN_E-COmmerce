@@ -1,7 +1,7 @@
 const Product = require("../models/product");
 
 // getProducts Controller
-getProducts = async (req, res) => {
+getReactProducts = async (req, res) => {
 	try {
 		const products = await Product.find();
 		console.log(products);
@@ -12,7 +12,7 @@ getProducts = async (req, res) => {
 };
 
 // createProduct Controller
-createProduct = async (req, res) => {
+createReactProduct = async (req, res) => {
 	const product = req.body;
 	const createProduct = new Product(product);
 	try {
@@ -23,5 +23,5 @@ createProduct = async (req, res) => {
 	}
 };
 
-exports.getProducts = getProducts;
-exports.createProduct = createProduct;
+exports.getReactProducts = getReactProducts;
+exports.createReactProduct = createReactProduct;
