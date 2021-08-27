@@ -6,7 +6,7 @@ const productSchema = new mongoose.Schema({
     creator: {type: String, required: true},
     // price: {type: Number, required: true},
     tags: [String],
-    selectedFile: String ,
+    selectedFile: String,
     likeCount: {
         type: Number,
         default: 0
